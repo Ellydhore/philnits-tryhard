@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    background-color: #121212;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.pdf-viewer {
+    flex-grow: 1;  /* Takes up remaining space */
+    height: 100%; /* Viewer takes up full height */
+    width: 100%;
+}
+
+#pdf-iframe {
+    border: none; /* Remove iframe border */
+    width: 100%;
+    height: 100%; /* Iframe takes up full height of pdf-viewer */
+}

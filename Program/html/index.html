@@ -1,0 +1,48 @@
+<!doctype html>
+<!--python3 -m http.server 8080-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PDF viewer for PhilNITS by Teknoy for Teknoys" />
+  <title>PhilNITS PDF Viewer</title>
+  <link rel="icon" href="../cit_logo.png" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/side_panel.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="side-panel side-panel-closed">
+            <ul class="sp-menu">
+                <button class="sp-toggle-btn" type="button">
+                    <span class="material-icons sp-icon-close">keyboard_double_arrow_right</span>
+                </button>
+            </ul>
+        </div>
+        <div class="side-panel side-panel-opened">
+            <ul class="sp-menu">
+                <button class="sp-menu-btn" type="button">FE QUESTIONNAIRES</button>
+                <button class="sp-menu-btn" type="button">SHOW ANSWER</button>
+                <button class="sp-menu-btn" type="button">SCAN ALL</button>
+                <button class="sp-toggle-btn" type="button">
+                    <span class="material-icons sp-icon-open">keyboard_double_arrow_left</span>
+                </button>
+            </ul>
+            <div class="sp-content">
+                <nav class="fe-links-container">
+                    <button class="fe-link-btn" type="button"></button>
+                </nav>
+            </div>
+        </div>
+        <div class="pdf-viewer">
+            <iframe id="pdf-iframe" src="../../FE/Questionnaires/2011A_AM.pdf"></iframe>
+        </div>
+    </div>
+    <script src="../javascript/side_panel.js"></script>
+</body>
+
+</html>
