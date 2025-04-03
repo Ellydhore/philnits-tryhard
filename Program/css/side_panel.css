@@ -158,3 +158,106 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
+
+/*
+    FE ANSWER KEY 
+*/
+
+.side-panel-opened .sp-content .fe-answer-container{
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 95%;
+    width: 90%;
+    border: none;
+    background-color: #566573;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.side-panel-opened .sp-content .answers-canvas {
+    height:100%;
+    width:100%
+}
+/*
+    SCAN RESULT 
+*/
+
+.side-panel-opened .sp-content .keyword-scan-container{
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 95%;
+    width: 90%;
+    border: none;
+    background-color: #566573;
+}
+
+.side-panel-opened .sp-content .keyword-scan-container .search-key-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: #1b2631;
+}
+
+.scan-input{
+    height: 80%;
+    flex-grow: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border: none;
+    hover: pointer;
+    font-size: 16px;
+}
+
+.scan-btn {
+    display: flex;
+    margin-right: 1rem;
+    padding: 0;
+    height: 80%;
+    width: 50px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #566573;
+    cursor: pointer;
+}
+
+.scan-btn:hover {
+    background-color: #e0dfdf;
+}
+
+.side-panel-opened .sp-content .keyword-scan-container .search-result-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: #566573;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.side-panel-opened .sp-content .keyword-scan-container .fe-link-btn{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: start;
+    align-items: center;
+    flex-shrink: 0;
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -1,12 +1,12 @@
-# PhilNITS tryhard (v1.0.0)
+# PhilNITS tryhard (v1.1.0)
 
 ### About:
     A pdf file manager specifically made for PhilNITS past FE questionnaires
 
 ### Features:
     - PDF viewer
-    - Auto-pair answer keys (To be implemented)
-    - Scan all files for keywords (To be implemented)
+    - Auto-pair answer keys (To be improved)
+    - Scan all files for keywords (To be improved)
     - Practice mode (To be implemented)
     - Save previous session (To be implemented)
 

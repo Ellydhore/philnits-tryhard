@@ -3,15 +3,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PDF viewer for PhilNITS by Teknoy for Teknoys" />
-  <title>PhilNITS PDF Viewer</title>
-  <link rel="icon" href="../cit_logo.png" />
-  <link rel="stylesheet" href="../css/index.css" />
-  <link rel="stylesheet" href="../css/side_panel.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PDF viewer for PhilNITS by Teknoy for Teknoys" />
+    <title>PhilNITS PDF Viewer</title>
+    <link rel="icon" href="../cit_logo.png" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/side_panel.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://www.pdftron.com/webviewer/lib/webviewer.min.js"></script>
 </head>
 
 <body>
@@ -25,17 +26,29 @@
         </div>
         <div class="side-panel side-panel-opened">
             <ul class="sp-menu">
-                <button class="sp-menu-btn" type="button">FE QUESTIONNAIRES</button>
-                <button class="sp-menu-btn" type="button">SHOW ANSWER</button>
-                <button class="sp-menu-btn" type="button">SCAN ALL</button>
+                <button class="sp-menu-btn" type="button" onclick="toggleContainer('fe-links-container')">FE QUESTIONNAIRES</button>
+                <button class="sp-menu-btn" type="button" onclick="toggleContainer('fe-answer-container')">SHOW ANSWER</button>
+                <button class="sp-menu-btn" type="button" onclick="toggleContainer('keyword-scan-container')">SCAN ALL</button>
                 <button class="sp-toggle-btn" type="button">
                     <span class="material-icons sp-icon-open">keyboard_double_arrow_left</span>
                 </button>
             </ul>
             <div class="sp-content">
-                <nav class="fe-links-container">
-                    <button class="fe-link-btn" type="button"></button>
+                <nav id="fe-links-container" class="fe-links-container">
                 </nav>
+                <div id="fe-answer-container" class="fe-answer-container">
+                    <canvas id="answers-canvas" class="answers-canvas"></canvas>
+                </div>
+                <div id="keyword-scan-container" class="keyword-scan-container">
+                    <div class="search-key-container">
+                        <input type="text" id="scan-input" class="scan-input" placeholder="Find a keyword in all files">
+                        <button id="scan-btn" class="scan-btn" type="button">
+                            <span class="material-icons sp-icon-close">search</span>
+                        </button>
+                    </div>
+                    <nav  id="search-result-container" class="search-result-container">   
+                    </nav>
+                </div>
             </div>
         </div>
         <div class="pdf-viewer">
